@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 const environment =
   process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
 const apiUrls = {
-  production: "huj",
+  production: "https://example-api.com",
   development: "http://localhost:8888"
 };
 
