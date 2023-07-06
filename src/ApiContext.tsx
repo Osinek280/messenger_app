@@ -44,8 +44,6 @@ const ApiProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
 
   const { user } = useContext(UserContext);
 
-  console.log(process.env.API_URL)
-
   const sendMessage = (title: string) => {
     if (user) {
       fetch('http://localhost:8888/messages', {

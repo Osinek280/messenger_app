@@ -18,7 +18,7 @@ function LoginModal() {
     };
     console.log(loginData)
     try {
-      const response = await fetch('http://localhost:8888/login', {
+      const response = await fetch(`${process.env.API_URL}/login`, {
         method: 'POST',
         body: JSON.stringify(loginData),
         headers: {
