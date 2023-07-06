@@ -17,7 +17,7 @@ const processShim = {
 };
 
 export default defineConfig({
-  base: '/vite-deploy/',
+  base: '/messenger_app/',
   plugins: [react()],
   define: {
     'process': JSON.stringify(processShim)
