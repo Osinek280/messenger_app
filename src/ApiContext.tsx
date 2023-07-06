@@ -46,7 +46,7 @@ const ApiProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
 
   const sendMessage = (title: string) => {
     if (user) {
-      fetch('http://localhost:8888/messages', {
+      fetch(`${process.env.API_URL}/messages`, {
         method: 'POST',
         body: JSON.stringify({ 
           title: title, 
