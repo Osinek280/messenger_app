@@ -5,8 +5,8 @@ const environment =
   process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
 const apiUrls = {
-  production: "https://messenger-serwer.vercel.app/",
-  development: "https://messenger-api-vcnc.onrender.com/"
+  production: "https://messenger-api-vcnc.onrender.com",
+  development: "https://messenger-api-vcnc.onrender.com"
 };
 
 const processShim = {
