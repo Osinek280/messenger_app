@@ -27,7 +27,7 @@ const UserProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
 
   const fetchUser = () => {
     const userToken = localStorage.getItem('userToken');
-    fetch(`http://localhost:8888/user/${userToken}`)
+    fetch(`${process.env.API_URL}/user/${userToken}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(response.statusText);
