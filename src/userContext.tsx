@@ -1,20 +1,4 @@
 import React, { createContext, useState, PropsWithChildren, useEffect } from 'react';
-import * as Cookies from 'cookies-js';
-
-interface Message {
-  id: string;
-  title: string;
-  ownerId: string;
-  conversationId: string;
-  date: number;
-}
-
-interface Conversation {
-  conversationId: string;
-  secondUserImage: string;
-  secondUserName: string;
-  lastMessage: Message;
-}
 
 type UserContextType = {
   user: User | null;

@@ -1,4 +1,3 @@
-import React from 'react';
 import './HomePage.css';
 import LoginModal from '../components/LoginModal/LoginModal';
 import RegisterModal from '../components/RegisterModal/RegisterModal';

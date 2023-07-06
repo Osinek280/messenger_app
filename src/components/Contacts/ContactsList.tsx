@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from 'react';
-import * as Cookies from 'cookies-js';
+import { useContext, useEffect } from 'react';
 import './ContactsList.css';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { ApiContext } from '../../ApiContext';

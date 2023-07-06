@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import './ChatWindow.css';
 import likeIcon from '../../icon/like.svg';
 import sendIcon from '../../icon/send.svg';
