@@ -1,0 +1,76 @@
+.emoticon-selector {
+  position: absolute;
+  top: -250px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 185px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  padding-right: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  overflow: hidden; /* Usuwa przewijanie w poziomie */
+}
+
+.search-emoticon-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.search-emoticon-input {
+  width: 150px;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.emoticon-container {
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
+  max-height: 150px;
+}
+
+.not-found{
+  display: flex;
+  justify-content: center;
+  width: 170px;
+}
+
+.emoticon-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.emoticon-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.emoticon-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.emoticon-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.emoticon {
+  width: 23px;
+  transition: all 0.3s;
+  padding: 1px;
+  border-radius: 30%;
+}
+
+.emoticon:hover{
+  background: #888;
+}

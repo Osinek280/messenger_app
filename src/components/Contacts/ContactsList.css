@@ -1,0 +1,75 @@
+.contact-container{
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 15px;
+
+  width: 300px;
+  height: 100vh;
+  border-right: 1px solid #868686 ;
+}
+
+.message-header{
+  padding: 15px 5px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.search-message-input{
+  padding: 8px 10px;
+  border-radius: 13px;
+  border: none;
+  outline: none;
+  background: #F3F3F5;
+  font-size: 16px;
+}
+
+.contact-list-container{
+  padding: 18px 0;
+}
+
+.message-user{
+  display: flex;
+  gap: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.message-user:hover, .message-user.active{
+  background: #F3F3F5;
+}
+
+.message-type{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+
+.message-user-name{
+  font-weight: 600;
+  color: black;
+}
+
+.last-message {
+  color: #65676B;
+  font-size: 14px;
+}
+
+.message-user-prof {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-user-prof img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
