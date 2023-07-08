@@ -37,8 +37,9 @@ const UserProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
         }
         return response.json();
       })
-      .then((user) => {
-        setUser(user)
+      .then((userData) => {
+        if(userData === user) return; 
+        setUser(userData)
       })
       .catch((error) => {
         console.error('Error:', error);

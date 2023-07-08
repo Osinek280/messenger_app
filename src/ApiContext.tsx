@@ -76,7 +76,9 @@ const ApiProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
         throw new Error('Failed to fetch conversations');
       }
       const data = await response.json();
-      setConversations(data);
+      if(data !== conversations) {
+        setConversations(data);
+      }
       fetchMessages(conversationId);
     } catch (error) {
       console.error(error);
@@ -93,6 +95,7 @@ const ApiProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
         throw new Error('Failed to fetch messages');
       }
       const data = await response.json();
+      if(data === messages) return
       setMessages(data);
     } catch (error) {
       console.error(error);
