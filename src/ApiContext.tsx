@@ -68,7 +68,7 @@ const ApiProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   const fetchConversations = async () => {
     try {
       if (!userToken) {
-        throw new Error('User token not found');
+        return
       }
       const url = `http://localhost:8888/conversations?userId=${encodeURIComponent(userToken)}`;
       const response = await fetch(url);
@@ -85,6 +85,9 @@ const ApiProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
 
   const fetchMessages = async (conversationId: string) => {
     try {
+      if (!conversationId) {
+        return
+      }
       const response = await fetch(`http://localhost:8888/messages/${conversationId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch messages');
@@ -99,6 +102,11 @@ const ApiProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   useEffect(() => {
     fetchConversations();
   }, [conversationId]);
+
+  useEffect(() => {
+    fetchMessages(conversationId)
+    fetchConversations()
+  })
 
   return (
     <ApiContext.Provider value={{ conversations, messages, sendMessage, fetchConversations }}>

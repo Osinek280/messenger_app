@@ -6,7 +6,7 @@ const environment =
 
 const apiUrls = {
   production: "https://messenger-api-vcnc.onrender.com",
-  development: "https://messenger-api-vcnc.onrender.com"
+  development: "http://localhost:8888"
 };
 
 const processShim = {
@@ -17,7 +17,7 @@ const processShim = {
 };
 
 export default defineConfig({
-  base: '/messenger_app/',
+  // base: '/messenger_app/',
   plugins: [react()],
   define: {
     'process': JSON.stringify(processShim)

@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import './ContactsList.css';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { ApiContext } from '../../ApiContext';
+import logOutIcon from '../../icon/log-out.svg';
 
 function ContactsList() {
   const navigate = useNavigate();
@@ -44,6 +45,15 @@ function ContactsList() {
           </Link>
         ))}
       </div>
+      <span 
+        className='log-out-btn' 
+        onClick={() => {
+          localStorage.removeItem('userToken');
+          window.location.reload();
+        }}
+      >
+        <img src={logOutIcon} alt='log-out-btn'></img>
+      </span>
     </div>
   );
 }

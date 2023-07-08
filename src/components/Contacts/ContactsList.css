@@ -9,6 +9,28 @@
   border-right: 1px solid #868686 ;
 }
 
+.contact-list-container{
+  flex: 1;
+}
+
+.log-out-btn{
+  display: flex;
+  justify-content: end;
+  padding: 15px 6px; 
+}
+
+.log-out-btn img {
+  cursor: pointer;
+  width: 34px;
+  padding: 6px;
+  border-radius: 35%;
+  transition: all 0.3s;
+}
+
+.log-out-btn img:hover{
+  background: #d3d3d3;
+}
+
 .message-header{
   padding: 15px 5px;
   font-weight: 600;
