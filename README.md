@@ -19,6 +19,7 @@ App:
 - VITE
 - REACT ROUTER DOM
 - CSS
+
 DATABASE:
 - TYPESCRIPT
 ## Data structure
