@@ -22,6 +22,8 @@ App:
 
 DATABASE:
 - TYPESCRIPT
+- CORS
+- UUID
 ## Data structure
 Users:
 ```

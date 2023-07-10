@@ -106,11 +106,6 @@ const ApiProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
     fetchConversations();
   }, [conversationId]);
 
-  useEffect(() => {
-    fetchMessages(conversationId)
-    fetchConversations()
-  })
-
   return (
     <ApiContext.Provider value={{ conversations, messages, sendMessage, fetchConversations }}>
       {children}
